@@ -8,6 +8,12 @@ type Props = {
 // of this file fixes an issue in Next.js 13.3.0 where link clicks that switch
 // the locale would otherwise be ignored.
 export default function RootLayout({ children }: Props) {
-  return children;
+  return (
+    <html>
+    {/* It seems important to have some css here */}
+      <body>
+        {children}
+      </body>
+    </html>
+  );
 }
-

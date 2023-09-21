@@ -8,22 +8,19 @@ type Props = {
 
 export default async function Layout({ children }: Props) {
   return (
-    <html>
-      {/* It seems important to have some css here */}
-      <body className={styles.Body}>
-        <div>
-          <Link href="/en/red" prefetch={false}>
-            Red
-          </Link>
-        </div>
-        <div>
-          <Link href="/en/blue" prefetch={false}>
-            Blue
-          </Link>
-        </div>
-        <main>{children}</main>
-      </body>
-    </html>
+    <>
+      <div className={styles.Body}>
+        <Link href="/en/red" prefetch={false}>
+          Red
+        </Link>
+      </div>
+      <div>
+        <Link href="/en/blue" prefetch={false}>
+          Blue
+        </Link>
+      </div>
+      <main>{children}</main>
+    </>
   );
 }
 
