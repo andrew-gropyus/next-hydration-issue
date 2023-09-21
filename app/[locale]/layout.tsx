@@ -9,6 +9,7 @@ type Props = {
 export default async function Layout({ children }: Props) {
   return (
     <>
+      {/* It seems important to have some css here */}
       <div className={styles.Body}>
         <Link href="/en/red" prefetch={false}>
           Red
